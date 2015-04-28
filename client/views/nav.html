@@ -1,0 +1,11 @@
+<template name="nav">
+
+	<a href="{{pathFor 'main'}}">Start</a>
+	{{#each pages}}
+		<a href="{{pathFor 'page' _id}}">{{name}}</a>
+	{{/each}}
+	{{#if currentUser}}
+		<a href="{{pathFor 'admin'}}">Admin</a>
+	{{/if}}
+
+</template>
